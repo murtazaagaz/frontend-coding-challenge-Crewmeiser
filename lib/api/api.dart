@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-const absencesPath = 'json_files/absences.json';
-const membersPath = 'json_files/members.json';
+import 'package:crewmeister_test/gen/assets.gen.dart';
+
+
 
 Future<List<dynamic>> readJsonFile(String path) async {
   String content = await File(path).readAsString();
@@ -11,9 +12,9 @@ Future<List<dynamic>> readJsonFile(String path) async {
 }
 
 Future<List<dynamic>> absences() async {
-  return await readJsonFile(absencesPath);
+  return await readJsonFile(Assets.jsonFiles.absences);
 }
 
 Future<List<dynamic>> members() async {
-  return await readJsonFile(membersPath);
+  return await readJsonFile(Assets.jsonFiles.members);
 }

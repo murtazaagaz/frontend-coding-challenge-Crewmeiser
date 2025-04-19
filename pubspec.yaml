@@ -1,4 +1,4 @@
-name: crewmesiser_test
+name: crewmeister_test
 description: "A new Flutter project."
 publish_to: "none"
 version: 0.1.0
@@ -9,12 +9,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shimmer: ^3.0.0
 
 dev_dependencies:
+  build_runner: ^2.4.14
+  flutter_gen_runner: ^5.9.0
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
   test: ^1.25.4
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/json_files/
