@@ -48,11 +48,7 @@ class AbsenceItem extends StatelessWidget {
 
         status = leaveStatus.name.toUpperCase();
         break;
-      default:
-        color = AppColors.colors.awaitingColor;
-        textColor = AppColors.colors.awaitingTextColor;
-        status = leaveStatus.name.toUpperCase();
-        break;
+     
     }
 
     return CircularContainer(
