@@ -48,7 +48,6 @@ class AbsenceItem extends StatelessWidget {
 
         status = leaveStatus.name.toUpperCase();
         break;
-     
     }
 
     return CircularContainer(
@@ -85,18 +84,18 @@ class AbsenceItem extends StatelessWidget {
                   color: AppColors.colors.primaryColor,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
               Text(
                 name,
-                style: AppTextStyles.medium.copyWith(
+                style: AppTextStyles.headingsSemiBold.copyWith(
                   color: AppColors.colors.titleText,
                 ),
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Row(
@@ -117,14 +116,21 @@ class AbsenceItem extends StatelessWidget {
             absenceType,
             style: AppTextStyles.medium,
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
-          TextInfo(title: StringConstants.memberNote, value: membersNote),
-          SizedBox(
-            height: 8,
-          ),
-          TextInfo(title: StringConstants.admitterNote, value: admittersNote),
+          if (membersNote.isNotEmpty) ...[
+            TextInfo(title: StringConstants.memberNote, value: membersNote),
+            const SizedBox(
+              height: 8,
+            ),
+          ],
+          if (admittersNote.isNotEmpty) ...[
+            TextInfo(title: StringConstants.admitterNote, value: admittersNote),
+            const SizedBox(
+              height: 8,
+            ),
+          ]
         ],
       ),
     ));

@@ -10,6 +10,7 @@ class TextInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           title,
@@ -20,10 +21,15 @@ class TextInfo extends StatelessWidget {
         SizedBox(
           width: 8,
         ),
-        Text(
-          value,
-          style: AppTextStyles.medium.copyWith(
-            color: AppColors.colors.titleText,
+        SizedBox(
+          width: 200,
+          child: Text(
+            value,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: AppTextStyles.medium.copyWith(
+              color: AppColors.colors.titleText,
+            ),
           ),
         )
       ],

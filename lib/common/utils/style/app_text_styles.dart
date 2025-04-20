@@ -8,6 +8,13 @@ class AppTextStyles {
     fontSize: 36,
   );
 
+  static final TextStyle subTitle = TextStyle(
+    color: AppColors.colors.titleText,
+    fontWeight: FontWeight.bold,
+    fontSize: 26,
+  );
+
+
   static final TextStyle headings = TextStyle(
     color: AppColors.colors.secondaryText,
     fontWeight: FontWeight.w600,
