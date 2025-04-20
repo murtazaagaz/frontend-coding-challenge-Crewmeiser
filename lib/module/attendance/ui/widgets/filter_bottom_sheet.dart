@@ -3,7 +3,6 @@ import 'package:crewmeister_test/common/utils/style/app_text_styles.dart';
 import 'package:crewmeister_test/common/utils/theme/app_colors.dart';
 import 'package:crewmeister_test/module/attendance/bloc/attendance_bloc.dart';
 import 'package:crewmeister_test/module/attendance/bloc/attendance_event.dart';
-import 'package:crewmeister_test/models/filter_model.dart';
 import 'package:crewmeister_test/module/attendance/bloc/attendance_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

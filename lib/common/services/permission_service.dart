@@ -12,7 +12,7 @@ class PermissionService {
       return true;
     }
 
-    final status = await Permission.storage.request();
+    final status = await Permission.manageExternalStorage.request();
     return status.isGranted;
   }
 
@@ -22,11 +22,11 @@ class PermissionService {
     }
 
     if (Platform.isAndroid) {
-      if (await Permission.accessMediaLocation.isGranted) {
+      if (await Permission.manageExternalStorage.isGranted) {
         return true;
       }
 
-      final status = await Permission.accessMediaLocation.request();
+      final status = await Permission.manageExternalStorage.request();
       return status.isGranted;
     }
 
